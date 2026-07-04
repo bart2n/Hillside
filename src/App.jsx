@@ -27,7 +27,11 @@ import {
   Copy,
   Layers,
   Home,
-  Maximize2
+  Maximize2,
+  Dumbbell,
+  SportShoe,
+  Baby
+  
 } from "lucide-react";
 import "./App.css";
 
@@ -556,10 +560,10 @@ export default function App() {
   }, [notification]);
 
  const amenities = [
-  { icon: <Activity size={20} />, label: "Fitness Centre" },
+  { icon: <Dumbbell size={20} />, label: "Fitness Centre" },
   { icon: <Zap size={20} />, label: "Gymnasium" },
-  { icon: <Activity size={20} />, label: "Jogging Trails" },
-  { icon: <Award size={20} />, label: "Kids Play Area" },
+  { icon: <SportShoe size={20} />, label: "Jogging Trails" },
+  { icon: <Baby size={20} />, label: "Kids Play Area" },
   { icon: <Waves size={20} />, label: "Swimming Pool" },
   { icon: <Activity size={20} />, label: "Tennis Courts" }
 ];
@@ -996,7 +1000,7 @@ export default function App() {
                   duration: 1.2,
                   ease: [0.19, 0.51, 0.23, 0.99]
                 }}
-                src={`${import.meta.env.BASE_URL}overview-08.jpg`}
+                src={`${import.meta.env.BASE_URL}binghatti-hillside-amenties-2.avif`}
                 alt="Vision"
                 className="w-full h-full object-cover"
               />
