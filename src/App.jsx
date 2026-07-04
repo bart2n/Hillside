@@ -475,10 +475,7 @@ const collections = [
     id: "maybach",
     name: "Studio",
     units: "320",
-    floors: "24 Residential",
-    area: "8,763.69 SQM",
     image: `${import.meta.env.BASE_URL}col-maybach-30.jpg`,
-    highlight: "Off-Road Luxury",
     facts: {
       type: "Residential & Retails",
       plot: "8,763.69 SQM / 94,332 SQFT",
@@ -506,10 +503,8 @@ const collections = [
     floors: "19 / 24 Residential",
     area: "14,220.38 SQM",
     image: `${import.meta.env.BASE_URL}col-luxury-34.jpg`,
-    highlight: "Curated Excellence",
     facts: {
       type: "Residential & Retails",
-      plot: "14,220.38 SQM / 153,067 SQFT",
       levels:
         "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 19 Residential Floors + 24 Residential Floors + Mechanical Floors + Roof",
       units: {
@@ -1058,12 +1053,10 @@ export default function App() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20" />
                   </div>
 
-                  <div className="relative z-10 p-8 md:p-9 flex flex-col h-full min-h-[480px]">
+                  <div className="relative z-10 p-8 md:p-9 flex flex-col h-full min-h-[300px]">
                     <div className="flex justify-between items-start mb-6">
                       <div>
-                        <p className="text-[10px] uppercase tracking-[0.28em] text-white/50 mb-1">
-                          {col.tower}
-                        </p>
+                        
                         <h3 className="text-2xl md:text-[26px] font-light tracking-tight leading-snug">
                           {col.name}
                         </h3>
@@ -1079,10 +1072,7 @@ export default function App() {
                       </button>
                     </div>
 
-                    <p className="inline-flex items-center gap-2 text-[11px] text-white/90 font-medium tracking-[0.22em] mb-8 border border-white/20 rounded-full px-4 py-2 bg-white/5 uppercase">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
-                      {col.highlight}
-                    </p>
+                    
 
                     <div className="grid grid-cols-3 gap-4 mb-8">
                       <div className="space-y-1">
@@ -1093,54 +1083,9 @@ export default function App() {
                           {col.units}
                         </p>
                       </div>
-                      <div className="space-y-1">
-                        <p className="text-[10px] uppercase tracking-[0.26em] text-white/40">
-                          Residential Floors
-                        </p>
-                        <p className="text-sm md:text-base font-medium text-white/90">
-                          {col.floors}
-                        </p>
-                      </div>
-                      <div className="space-y-1">
-                        <p className="text-[10px] uppercase tracking-[0.26em] text-white/40">
-                          Plot Area
-                        </p>
-                        <p className="text-sm md:text-base font-medium text-white/90">
-                          {col.area}
-                        </p>
-                      </div>
                     </div>
 
-                    <div className="mt-auto pt-6 border-t border-white/10">
-                      <p className="text-[10px] uppercase tracking-[0.26em] text-white/45 mb-4">
-                        Unit Mix
-                      </p>
-                      <div className="grid grid-cols-2 gap-3 text-sm">
-                        {Object.entries(col.facts.units).map(([key, val]) => {
-                          const label = key
-                            .replace("studio", "Studio")
-                            .replace("bed1", "1 Bedroom")
-                            .replace("bed2", "2 Bedroom")
-                            .replace("bed3", "3 Bedroom")
-                            .replace("bed4", "4 Bedroom")
-                            .replace("bed5", "5 Bedroom")
-                            .replace("shops", "Retail Shops");
-                          return (
-                            <div
-                              key={key}
-                              className="flex items-center justify-between bg-white/5 border border-white/10 rounded-2xl px-3 py-2.5"
-                            >
-                              <span className="text-[11px] uppercase tracking-[0.18em] text-white/70">
-                                {label}
-                              </span>
-                              <span className="text-sm font-semibold text-white">
-                                {val}
-                              </span>
-                            </div>
-                          );
-                        })}
-                      </div>
-
+                    <div className=" pt-6 border-t border-white/10">
                       <div className="mt-6 flex items-center justify-between gap-3">
                         <button
                           onClick={() => setSelectedCollection(col)}
