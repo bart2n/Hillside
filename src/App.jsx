@@ -469,9 +469,8 @@ const CollectionModal = ({ isOpen, onClose, collection }) => {
 const collections = [
   {
     id: "maybach",
-    name: "Project Maybach",
-    tower: "Tower 1",
-    units: "816",
+    name: "Studio",
+    units: "320",
     floors: "24 Residential",
     area: "8,763.69 SQM",
     image: `${import.meta.env.BASE_URL}col-maybach-30.jpg`,
@@ -498,9 +497,8 @@ const collections = [
   },
   {
     id: "ultimate-luxury",
-    name: "Vision Mercedes-Maybach Ultimate Luxury",
-    tower: "Towers 2 & 3",
-    units: "1,204",
+    name: "1 Bedroom",
+    units: "82",
     floors: "19 / 24 Residential",
     area: "14,220.38 SQM",
     image: `${import.meta.env.BASE_URL}col-luxury-34.jpg`,
@@ -525,175 +523,7 @@ const collections = [
       `${import.meta.env.BASE_URL}ProjectMaybachLuzury/PML4.png`
     ]
   },
-  {
-    id: "maybach6",
-    name: "Vision Mercedes-Maybach 6",
-    tower: "Towers 4 & 5",
-    units: "1,844",
-    floors: "29 / 34 Residential",
-    area: "14,325.92 SQM",
-    image: `${import.meta.env.BASE_URL}col-maybach6-37.jpg`,
-    highlight: "Ultimate Sophistication",
-    facts: {
-      type: "Residential & Retails",
-      plot: "14,325.92 SQM / 154,203 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 29 Residential Floors + 34 Residential Floors + 2 Mechanical Floors + Roof",
-      units: {
-        studio: 1344,
-        bed1: 220,
-        bed2: 220,
-        bed3: 60,
-        shops: 34
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}VisionMercedesMaybach6/VMM1.png`,
-      `${import.meta.env.BASE_URL}VisionMercedesMaybach6/VMM2.png`,
-      `${import.meta.env.BASE_URL}VisionMercedesMaybach6/VMM3.png`,
-      `${import.meta.env.BASE_URL}VisionMercedesMaybach6/VMM4.png`
-    ]
-  },
-  {
-    id: "iconic",
-    name: "Vision Iconic",
-    tower: "Tower 6",
-    units: "1,404",
-    floors: "66 Residential",
-    area: "22,282.20 SQM",
-    image: `${import.meta.env.BASE_URL}col-iconic-24.jpg`,
-    highlight: "66 Floors of Pure Luxury",
-    facts: {
-      type: "Residential & Retails",
-      plot: "22,282.20 SQM / 239,846 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 66 Residential Floors + 9 Mechanical Floors + Roof",
-      units: {
-        bed1: 1001,
-        bed2: 277,
-        bed3: 108,
-        bed4: 9,
-        bed5: 9,
-        shops: 21
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}VisionIconic/VI1.png`,
-      `${import.meta.env.BASE_URL}VisionIconic/VI2.png`,
-      `${import.meta.env.BASE_URL}VisionIconic/VI3.png`,
-      `${import.meta.env.BASE_URL}VisionIconic/VI4.png`,
-      `${import.meta.env.BASE_URL}VisionIconic/VI5.png`
-    ]
-  },
-  {
-    id: "one-eleven",
-    name: "Vision One-Eleven",
-    tower: "Tower 7",
-    units: "1,366",
-    floors: "60 Residential",
-    area: "7,901.03 SQM",
-    image: `${import.meta.env.BASE_URL}col-one-eleven-51.jpg`,
-    highlight: "Iconic Proportions",
-    facts: {
-      type: "Residential & Retails",
-      plot: "7,901.03 SQM / 85,047 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 60 Residential Floors + 4 Mechanical Floors + Roof",
-      units: {
-        bed1: 1080,
-        bed2: 236,
-        bed3: 50,
-        shops: 18
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}VisionOneEleven/VOE1.png`,
-      `${import.meta.env.BASE_URL}VisionOneEleven/VOE2.png`,
-      `${import.meta.env.BASE_URL}VisionOneEleven/VOE3.png`
-    ]
-  },
-  {
-    id: "amg",
-    name: "Mercedes-Benz AMG Vision",
-    tower: "Towers 8 & 9",
-    units: "2,692",
-    floors: "47 / 52 Residential",
-    area: "11,626.97 SQM",
-    image: `${import.meta.env.BASE_URL}col-amg-48.jpg`,
-    highlight: "High-Performance Living",
-    facts: {
-      type: "Residential & Retails",
-      plot: "11,626.97 SQM / 125,153 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 52 Residential Floors + 4 Mechanical Room + Roof / 47 Residential Floors + 2 Mechanical Floors + Roof",
-      units: {
-        studio: 1112,
-        bed1: 1344,
-        bed2: 236,
-        shops: 35
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}Mercedes-BenzAMGVision/MBAV1.png`,
-      `${import.meta.env.BASE_URL}Mercedes-BenzAMGVision/MBAV2.png`,
-      `${import.meta.env.BASE_URL}Mercedes-BenzAMGVision/MBAV3.png`
-    ]
-  },
-  {
-    id: "avtr",
-    name: "VISION AVTR",
-    tower: "Tower 10",
-    units: "1,280",
-    floors: "41 Residential",
-    area: "12,835.93 SQM",
-    image: `${import.meta.env.BASE_URL}col-avtr-44.jpg`,
-    highlight: "Futuristic Design",
-    facts: {
-      type: "Residential & Retails",
-      plot: "12,835.93 SQM / 138,166 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 41 Residential Floors + 2 Mechanical Floors + Roof",
-      units: {
-        studio: 640,
-        bed1: 480,
-        bed2: 160,
-        shops: 23
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}VisionAVTR/VA1.png`,
-      `${import.meta.env.BASE_URL}VisionAVTR/VA2.png`,
-      `${import.meta.env.BASE_URL}VisionAVTR/VA3.png`
-    ]
-  },
-  {
-    id: "simplex",
-    name: "Vision Simplex",
-    tower: "Towers 11 & 12",
-    units: "2,208",
-    floors: "29 / 35 Residential",
-    area: "11,359.06 SQM",
-    image: `${import.meta.env.BASE_URL}col-simplex-41.jpg`,
-    highlight: "Heritage Reimagined",
-    facts: {
-      type: "Residential & Retails",
-      plot: "11,359.06 SQM / 122,269 SQFT",
-      levels:
-        "Basement + Ground Floor + Mezzanine + 5 Parking Floors + 35 Residential Floors + 2 Mechanical Rooms + Roof / 29 Residential Floors + 2 Mechanical Floors + Roof",
-      units: {
-        studio: 1440,
-        bed1: 520,
-        bed2: 248,
-        shops: 34
-      }
-    },
-    gallery: [
-      `${import.meta.env.BASE_URL}VIsionSimplex/VS1.png`,
-      `${import.meta.env.BASE_URL}VIsionSimplex/VS2.png`,
-      `${import.meta.env.BASE_URL}VIsionSimplex/VS3.png`,
-      `${import.meta.env.BASE_URL}VIsionSimplex/VS4.png`
-    ]
-  }
+  
 ];
 
 /* ----------------- Main App ----------------- */
@@ -725,14 +555,14 @@ export default function App() {
     }
   }, [notification]);
 
-  const amenities = [
-    { icon: <Zap size={20} />, label: "Solar Photovoltaic" },
-    { icon: <Award size={20} />, label: "LEED Certification" },
-    { icon: <Activity size={20} />, label: "Skyline Jogging Path" },
-    { icon: <Waves size={20} />, label: "Sky Infinity Pool" },
-    { icon: <ShieldCheck size={20} />, label: "Smart System" },
-    { icon: <Car size={20} />, label: "Valet Service" }
-  ];
+ const amenities = [
+  { icon: <Activity size={20} />, label: "Fitness Centre" },
+  { icon: <Zap size={20} />, label: "Gymnasium" },
+  { icon: <Activity size={20} />, label: "Jogging Trails" },
+  { icon: <Award size={20} />, label: "Kids Play Area" },
+  { icon: <Waves size={20} />, label: "Swimming Pool" },
+  { icon: <Activity size={20} />, label: "Tennis Courts" }
+];
 
   const scrollToSection = id => {
     const element = document.getElementById(id);
@@ -1027,7 +857,7 @@ export default function App() {
                 DP REAL ESTATE
               </span>
               <span className="text-[10px] tracking-[0.35em] uppercase text-white/50">
-                Mercedes-Benz Places
+                Binghatti Hillside
               </span>
             </div>
           </div>
@@ -1114,26 +944,19 @@ export default function App() {
             loop
             muted
             playsInline
-            src={`${import.meta.env.BASE_URL}high.mp4`}
+            src={`${import.meta.env.BASE_URL}binghatti-hillside.avif`}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black" />
         </motion.div>
         <div className="relative z-10 text-center px-6">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="text-xs md:text-sm uppercase tracking-[0.5em] text-white/80 mb-6 drop-shadow-[0_0_16px_rgba(255,255,255,0.35)]"
-          >
-            World&apos;s First Branded City
-          </motion.p>
+          
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
             className="text-5xl md:text-8xl font-extralight tracking-tight mb-8"
           >
-            Mercedes-Benz <span className="text-white/35 italic">Places</span>
+            Binghatti Hillside 
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -1152,7 +975,7 @@ export default function App() {
             <div className="flex items-center gap-4 text-white/60">
               <div className="h-px w-12 bg-white/30" />
               <span className="text-[10px] uppercase tracking-[0.35em]">
-                Binghatti City | Dubai
+                Dubai Science Park | Dubai
               </span>
               <div className="h-px w-12 bg-white/30" />
             </div>
@@ -1190,15 +1013,10 @@ export default function App() {
               </h2>
               <div className="space-y-6 text-gray-300 text-lg font-light leading-relaxed">
                 <p>
-                  Mercedes-Benz Places | Binghatti City is a landmark residential
-                  community that redefines urban living. Not merely structures,
-                  but a masterplanned city-scale vision where global brand
-                  prestige becomes a personal, lived-in experience.
+                  Binghatti Hillside | Binghatti City is a high-end residential ecosystem designed for the modern elite. More than a landmark, it is a self-contained city-scale vision where world-class design logic shapes the daily experience. Across 12 architectural masterpieces, the community blends striking geometric precision with flowing, avant-garde facades to establish Dubai's newest iconic address.
                 </p>
                 <p>
-                  Composed of 12 towers, the city establishes an undeniable
-                  presence. Structures exercise precision engineering, where
-                  flowing, sculpted surfaces embody kinetic energy and motion.
+                  Spanning a monumental 12-tower skyline, this premier destination transforms global prestige into a tangible lifestyle. Every tower commands attention with sweeping, aerodynamic contours and kinetic lines that evoke a sense of continuous motion and effortless luxury.
                 </p>
               </div>
             </FadeIn>
@@ -1214,7 +1032,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             subtitle="Architectural Masterpieces"
-            title="The Exclusive Collections"
+            title="Room Plans"
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {collections.map((col, idx) => (
@@ -1385,21 +1203,19 @@ export default function App() {
                   <span className="text-white/40">City of Now</span>
                 </h2>
                 <p className="text-gray-400 text-lg font-light leading-relaxed mb-10">
-                  Strategically located at the junction of Dubai&apos;s drive and
-                  unique artistry. The area is globally renowned for equestrian
-                  excellence and the iconic Meydan Racecourse.
+                  Binghatti Hillside debuts as an architectural masterpiece, bringing design-led excellence and hyper-connected luxury to the heart of Dubai Science Park.
                 </p>
                 <div className="grid grid-cols-2 gap-8">
                   {[
                     {
-                      time: "8 Minutes",
-                      place: "Dubai Mall / Burj Khalifa"
+                      time: " 10 Minutes",
+                      place: "Business Bay"
                     },
                     {
-                      time: "15 Minutes",
-                      place: "Dubai Intl Airport"
+                      time: "12 Minutes",
+                      place: "Burj Khalifa"
                     },
-                    { time: "10 Minutes", place: "Business Bay" },
+                    { time: "15 Minutes", place: " Dubai International Airport (DXB)" },
                     { time: "20 Minutes", place: "Palm Jumeirah" }
                   ].map((loc, idx) => (
                     <div
@@ -1422,7 +1238,7 @@ export default function App() {
               <div className="relative h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(255,255,255,0.05)]">
                 <iframe
                   title="Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d137513.5444096678!2d55.31223936810359!3d25.08212905656814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f67b9e2599107%3A0x4a9e775524bcf3ec!2sMercedes-Benz%20Places%20%7C%20Binghatti%20City!5e0!3m2!1sen!2sae!4v1767957272068!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.9091752635622!2d55.24373757605152!3d25.071067336796677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f719ae4ea69%3A0x3518cf18e7760d0c!2sBinghatti%20Hillside!5e0!3m2!1sen!2ses!4v1783156101902!5m2!1sen!2ses"
                   className="w-full h-full border-0 grayscale invert opacity-80"
                   loading="lazy"
                 />
@@ -1584,9 +1400,7 @@ export default function App() {
               </div>
             </div>
             <p className="text-gray-500 text-sm max-w-sm font-light">
-              The world&apos;s first Mercedes-Benz branded city, bringing
-              architectural excellence and unmatched luxury to Dubai&apos;s
-              Meydan district.
+              Binghatti Hillside debuts as an architectural masterpiece, bringing design-led excellence and hyper-connected luxury to the heart of Dubai Science Park.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <div className="flex items-center gap-3">
@@ -1640,7 +1454,7 @@ export default function App() {
                 Location
               </span>
               <span className="text-sm font-light text-white/80">
-                Nad Al Sheba, Dubai
+                Dubai Science Park, Al Barsha South 2, Dubai
               </span>
             </div>
             <button
