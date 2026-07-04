@@ -280,22 +280,22 @@ const CollectionModal = ({ isOpen, onClose, collection }) => {
               <X size={26} className="text-white/50" />
             </button>
 
-            <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-10 items-start">
+            <div className="max-w-1xl mx-auto">
               {/* Left: gallery slider, title on top with black font */}
-              <div className="relative rounded-3xl overflow-hidden border border-white/12 bg-white/5">
+              <div className="relative w-full max-w-md mx-auto rounded-3xl overflow-hidden border border-white/12 bg-white/5">
                 {totalSlides > 0 ? (
                   <>
                     <AnimatePresence mode="wait">
                       <motion.img
-                        key={gallery[activeIndex]}
-                        src={gallery[activeIndex]}
-                        alt={`${collection.name} ${activeIndex + 1}`}
-                        className="w-full h-auto object-cover block"
-                        initial={{ opacity: 0, scale: 1.02 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.98 }}
-                        transition={{ duration: 0.5 }}
-                      />
+  key={gallery[activeIndex]}
+  src={gallery[activeIndex]}
+  alt={`${collection.name} ${activeIndex + 1}`}
+  className="w-full aspect-[2/3] object-contain bg-white"
+  initial={{ opacity: 0, scale: 1.02 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 0.98 }}
+  transition={{ duration: 0.5 }}
+/>
                     </AnimatePresence>
 
                     {/* <div className="absolute top-5 left-5 right-5 pointer-events-none">
@@ -354,97 +354,16 @@ const CollectionModal = ({ isOpen, onClose, collection }) => {
               </div>
 
               {/* Right: facts, units, CTAs */}
-              <div className="flex flex-col">
-                <p className="text-[11px] uppercase tracking-[0.4em] text-white/45 mb-4">
-                  Project Facts
-                </p>
+              <div className="mt-6 flex justify-center">
 
-                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                  <div className="rounded-2xl bg-white/4 border border-white/15 p-4">
-                    <p className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-1.5">
-                      Property Type
-                    </p>
-                    <p className="text-sm md:text-base font-light text-white/95">
-                      {collection.facts.type}
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white/4 border border-white/15 p-4">
-                    <p className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-1.5">
-                      Plot Area
-                    </p>
-                    <p className="text-sm md:text-base font-light text-white/95">
-                      {collection.facts.plot}
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white/4 border border-white/15 p-4">
-                    <p className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-1.5">
-                      Total Units
-                    </p>
-                    <p className="text-2xl font-semibold text-white">
-                      {collection.units}
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-white/4 border border-white/15 p-4">
-                    <p className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-1.5">
-                      Residential Floors
-                    </p>
-                    <p className="text-sm md:text-base font-medium text-white/95">
-                      {collection.floors}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mb-8">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/45 mb-2">
-                    Architectural Composition
-                  </p>
-                  <p className="text-sm md:text-[15px] font-light text-white/80 leading-relaxed">
-                    {collection.facts.levels}
-                  </p>
-                </div>
-
-                <div className="mb-8">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/45 mb-3">
-                    Unit Distribution
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {Object.entries(collection.facts.units).map(
-                      ([key, val]) => {
-                        const label = key
-                          .replace("studio", "Studio")
-                          .replace("bed1", "1 Bedroom")
-                          .replace("bed2", "2 Bedroom")
-                          .replace("bed3", "3 Bedroom")
-                          .replace("bed4", "4 Bedroom")
-                          .replace("bed5", "5 Bedroom")
-                          .replace("shops", "Retail Shops");
-
-                        return (
-                          <div
-                            key={key}
-                            className="rounded-2xl bg-white/5 border border-white/16 px-3.5 py-3 flex flex-col gap-1"
-                          >
-                            <span className="text-[10px] uppercase tracking-[0.24em] text-white/60">
-                              {label}
-                            </span>
-                            <span className="text-xl font-semibold text-white">
-                              {val}
-                            </span>
-                          </div>
-                        );
-                      }
-                    )}
-                  </div>
-                </div>
-
-                <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => {
                       onClose();
                       const el = document.getElementById("inquiry");
                       if (el) el.scrollIntoView({ behavior: "smooth" });
                     }}
-                    className="flex-1 py-4 bg-white text-black rounded-2xl text-[11px] uppercase
+                    className="px-8 py-4 bg-white text-black rounded-2xl text-[11px] uppercase
                                tracking-[0.32em] font-bold hover:bg-gray-200 transition-all
                                shadow-[0_0_30px_rgba(255,255,255,0.25)]"
                   >
@@ -490,10 +409,7 @@ const collections = [
       }
     },
     gallery: [
-      `${import.meta.env.BASE_URL}ProjectMaybach/PM1.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybach/PM2.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybach/PM3.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybach/PM4.png`
+      `${import.meta.env.BASE_URL}binghatti-hillside-studio-layout.avif`,
     ]
   },
   {
@@ -516,10 +432,7 @@ const collections = [
       }
     },
     gallery: [
-      `${import.meta.env.BASE_URL}ProjectMaybachLuzury/PML1.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybachLuzury/PML2.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybachLuzury/PML3.png`,
-      `${import.meta.env.BASE_URL}ProjectMaybachLuzury/PML4.png`
+      `${import.meta.env.BASE_URL}binghatti-hillside-one-bedroom-layout.avif`,
     ]
   },
   
@@ -1145,7 +1058,7 @@ export default function App() {
             <div>
               <FadeIn>
                 <p className="text-[10px] uppercase tracking-[0.4em] text-white/40 mb-6 font-medium">
-                  Nad Al Sheba District
+                  Dubai Science Park (DSP) district
                 </p>
                 <h2 className="text-4xl md:text-5xl font-extralight mb-8 leading-tight">
                   Next In The <br />
